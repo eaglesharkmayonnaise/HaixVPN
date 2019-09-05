@@ -1,0 +1,96 @@
+//
+//  YJ-PrefixHeader.pch
+//  rabbit
+//
+//  Created by txb on 2017/4/19.
+//  Copyright © 2017年 yicheng. All rights reserved.
+//
+
+#ifndef YJ_PrefixHeader_pch
+#define YJ_PrefixHeader_pch
+
+#import <sys/utsname.h>
+#import "EncryptAndEcode.h"
+#import "LCProgressHUD.h"
+#import "SAMKeychain.h"
+#import "AppDelegate.h"
+#import "RigistViewController.h"
+#import "SignViewController.h"
+#import "UIColor+HexString.h"
+#import "WPAutoSpringTextViewController.h"
+#import "QNNetworkInfo.h"
+#import "AFNetworking.h"
+#import "CKAlertViewController.h"
+#import "UIButton+ImageTitleSpacing.h"
+#import "ViewController.h"
+#import "MMDrawerBarButtonItem.h"
+#import "UIViewController+MMDrawerController.h"
+#import "ZJAnimationPopView.h"
+#import "GetMiYao.h"
+#import <arpa/inet.h>
+#include <dns.h>
+#include <netdb.h>
+#import "SocketManager.h"
+#import "ProtobufManage.h"
+#import "EncryptAndEcode.h"
+#import "AFNetworking.h"
+#import "LCProgressHUD.h"
+#import "ClearCacheTool.h"
+#import "NSString+RemoveSpace.h"
+#import "NetworkApi.h"
+#import "AppEnvironment.h"
+#import "UILabel+YBAttributeTextTapAction.h"
+#import "MonitorFlow.h"
+//#define AryamaskUrl @"http://testapi.aryamask.com/v1.0/api/"
+#define AryamaskUrl @"https://haixapp.com/v1.0/api/"
+#import "SDWebImageManager.h"
+#import "UIImageView+WebCache.h"
+#import <CommonCrypto/CommonDigest.h>
+#import "MyPlanViewController.h"
+#import "LYTableViewInfo.h"
+#import "Potatso-Swift.h"
+#import "UIImage+SVGManager.h"
+#import "TFHpple.h"
+#import "UIView+UIView_Fram.h"
+#import "NSTimer+Pluto.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "HXHUD.h"
+#import "WYWebController.h"
+#import <PWCoreSDK/PWCoreSDK.h>
+
+
+//#import "GifView.h"
+#if DEBUG
+
+#define NSLog(FORMAT, ...) fprintf(stderr,"[%s:%d行] %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#else
+
+#define NSLog(FORMAT, ...) nil
+
+#endif
+
+
+#define ViewBackColor makecolor(218, 218, 218)
+#define HuiseZT [UIColor colorWithHexString:@"#D1D5DB"]
+#define SJhight kscreenh/667.f
+#define SJwidth kscreenw/375.f
+#define adId [SSKeyChainTools getDeviceId]
+#define RGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define RGB_color(r, g, b,c) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:c]
+#define ZTblue [UIColor colorWithRed:0.46 green:0.59 blue:1 alpha:1]
+#define HuiseZT [UIColor colorWithHexString:@"#D1D5DB"]
+#define YJURL  @"https://api.elina2.net/v1.6/"
+#define YJURL1 @"https://api.elina2.net/v1.6/api/"
+#define makecolor(r,g,b)  [UIColor colorWithRed:r/225.f green:g/225.f blue:b/225.f alpha:1]
+#define kscreenw [UIScreen mainScreen].bounds.size.width
+#define kscreenh [UIScreen mainScreen].bounds.size.height
+
+#define lanse [UIColor colorWithHexString:@"448AFF"]
+
+
+#define ASLocalizedString(key)  [NSString stringWithFormat:@"%@", [[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"appLanguage"]] ofType:@"lproj"]] localizedStringForKey:(key) value:nil table:@"Localizable"]]
+
+
+#endif /* YJ_PrefixHeader_pch */

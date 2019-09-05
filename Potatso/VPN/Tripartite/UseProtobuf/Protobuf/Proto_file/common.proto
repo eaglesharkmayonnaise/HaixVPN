@@ -1,0 +1,113 @@
+syntax = "proto2";
+
+
+//Constant
+message Constant
+{
+    enum Command
+    {
+        // ALL CMD should based on following rules
+        // default method List(0~1) Create(2~3) Delete(4~5) Update(6~7) Get(8~9)
+        // if not use (a~f)
+        // all request cmd should be an even number
+        // and all resoponse cmd should be an odd number(request + 1)
+        
+        
+        // INIT
+        CMD_INIT_REQUEST = 0x010a;
+        CMD_INIT_RESPONSE = 0x010b;
+        CMD_NEED_REGISTER_DEVICE_REQUEST = 0x010c;
+        CMD_NEED_REGISTER_DEVICE_RESPONSE = 0x010d;
+
+        // CMD DEVICE METHOD
+        CMD_DEVICE_REGISTER_REQUEST = 0x0112;
+        CMD_DEVICE_REGISTER_RESPONSE = 0x0113;
+        CMD_DEVICE_DELETE_REQUEST = 0x0114;
+        CMD_DEVICE_DELETE_RESPONSE = 0x0115;
+        CMD_DEVICE_UPDATE_REQUEST = 0x0116;
+        CMD_DEVICE_UPDATE_RESPONSE = 0x0117;
+
+        // CMD NODE METHOD
+        CMD_NODE_LIST_REQUEST = 0x0120;
+        CMD_NODE_LIST_RESPONSE = 0x121;
+        CMD_NODE_GEN_REQUEST = 0x0122;
+        CMD_NODE_GEN_RESPONSE = 0x0123;
+        CMD_NODE_REMOVE_REQUEST = 0x0124;
+        CMD_NODE_REMOVE_RESPONSE = 0x0125;
+        CMD_NODE_RESET_REQUEST = 0x0126;
+        CMD_NODE_RESET_RESPONSE = 0x0127;
+
+
+        // CMD PLAN METHOD
+        CMD_PLAN_TYPE_LIST_REQUEST = 0x0130;
+        CMD_PLAN_TYPE_LIST_RESPONSE = 0x0131;
+        CMD_PLAN_TYPE_CREATE_REQUEST = 0x0132;
+        CMD_PLAN_TYPE_CREATE_RESPONSE = 0x0133;
+        CMD_PLAN_TYPE_DELETE_REQUEST = 0x0134;
+        CMD_PLAN_TYPE_DELETE_RESPONSE = 0x0135;
+        CMD_PLAN_TYPE_UPDATE_REQUEST = 0x0136;
+        CMD_PLAN_TYPE_UPDATE_RESPONSE = 0x0137;
+        CMD_PLAN_TYPE_GET_REQUEST = 0x0138;
+        CMD_PLAN_TYPE_GET_RESPONSE = 0x0139;
+
+    
+        CMD_PLAN_LIST_REQUEST = 0x0140;
+        CMD_PLAN_LIST_RESPONSE = 0x0141;
+        CMD_PLAN_CREATE_REQUEST = 0x0142;
+        CMD_PLAN_CREATE_RESPONSE = 0x0143;
+        CMD_PLAN_DELETE_REQUEST = 0x0144;
+        CMD_PLAN_DELETE_RESPONSE = 0x0145;
+        CMD_PLAN_UPDATE_REQUEST = 0x0146;
+        CMD_PLAN_UPDATE_RESPONSE = 0x0147;
+        CMD_PLAN_GET_REQUEST = 0x0148;
+        CMD_PLAN_GET_RESPONSE = 0x0149;
+
+        // TEST
+        CMD_ECHO_REQUEST = 0x0200;
+        CMD_ECHO_RESPONSE = 0x0201;
+        CMD_MESSAGE_SEND_REQUEST = 0x0002;
+        CMD_MESSAGE_SEND_RESPONSE = 0x0003;
+        CMD_MESSAGE_NOTIFY_REQUEST = 0x0004;
+        CMD_MESSAGE_NOTIFY_RESPONSE = 0x0005;
+    }
+
+    enum Result
+    {
+        SUCCESS = 0;
+        //common error
+        ERROR_PARAMS = 1;
+        ERROR_SERVER = 2;
+        ERROR_USERNAME_EXIST = 3;
+        ERROR_USERNAME_NOT_EXIST = 4;
+        ERROR_FORBIDDEN = 5;
+    }
+}
+
+//Data
+
+message MessageInfo
+{
+    optional string from_id = 1;
+    optional string content = 2;
+}
+
+//Protocol
+
+//Common Packet
+
+message PacketHeader
+{
+    optional string header_id = 1;
+    optional uint32 version = 2;
+    optional uint32 command = 3;    //Constant.Command
+    optional uint32 result = 4;    //Constant.Result
+    optional uint32 timestamp = 5;
+}
+
+message BaseResponse
+{
+    optional uint32 code = 1;
+    optional uint32 detail_code = 2;
+    optional bool is_successfully = 3;
+    optional string msg = 4;
+}

@@ -1,0 +1,77 @@
+syntax = "proto2";
+
+import "common.proto";
+
+message Node
+{
+    optional string user = 1;
+    optional string port = 2;
+    optional string method = 3;
+    optional string passwd = 4;
+    optional string protocol = 5;
+    optional string obfs = 6;
+    optional string address = 7;
+    optional string sn = 8;
+    optional string city = 9;
+    optional string country = 10;
+    optional uint32 weight = 11;
+    optional string transfer_enable = 12;
+    optional uint32 u = 13;
+    optional uint32 d = 14;
+    optional string forbidden_port = 15;
+}
+
+
+message NODE_GEN_REQUEST
+{
+    required uint32 require_number = 1;
+}
+
+message NODE_GEN_RESPONSE
+{
+    required BaseResponse baseResponse = 1;
+    repeated Node nodes = 2;
+}
+
+
+message NODE_RESET_REQUEST
+{
+    required string id = 1;
+}
+
+message NODE_RESET_RESPONSE
+{
+    required BaseResponse baseResponse = 1;
+    optional Node node = 2;
+}
+
+
+message NODE_REMOVE_REQUEST
+{
+    repeated string ids = 1;
+}
+
+message NODE_REMOVE_RESPONSE
+{
+    required BaseResponse baseResponse = 1;
+}
+
+
+message NODE_LIST_REQUEST
+{
+    // default get all, otherwise filter with options
+    optional string method = 1;
+    optional string protocol =2;
+    optional string obfs = 3;
+    optional string address = 4;
+    optional string id = 5;
+    optional string city = 6;
+    optional string country = 7;
+}
+
+message NODE_LIST_RESPONSE
+{
+    required BaseResponse baseResponse = 1;
+    repeated Node nodes = 2;
+}
+

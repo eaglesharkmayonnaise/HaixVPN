@@ -1,0 +1,32 @@
+
+
+.vscode/*
+.idea/*
+
+
+### Python template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*__pycache__/*
+*/__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+
+
+# dotenv
+.env
+
+# virtualenv
+venv/
+ENV/
+
+# C extensions
+*.so
+
+### macOS template
+# General
+*.DS_Store
+.AppleDouble
+.LSOverride

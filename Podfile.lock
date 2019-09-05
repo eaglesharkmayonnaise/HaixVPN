@@ -1,0 +1,250 @@
+PODS:
+  - Alamofire (4.9.0)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - Appirater (2.3.1)
+  - Aspects (0.0.1)
+  - AsyncSwift (2.0.4)
+  - CallbackURLKit (2.2.0):
+    - CallbackURLKit/Core (= 2.2.0)
+  - CallbackURLKit/Core (2.2.0)
+  - CardIO (5.4.1)
+  - Cartography (4.0.0)
+  - CocoaAsyncSocket (7.4.3):
+    - CocoaAsyncSocket/All (= 7.4.3)
+  - CocoaAsyncSocket/All (7.4.3):
+    - CocoaAsyncSocket/GCD
+    - CocoaAsyncSocket/RunLoop
+  - CocoaAsyncSocket/GCD (7.4.3)
+  - CocoaAsyncSocket/RunLoop (7.4.3)
+  - CocoaLumberjack (3.5.3):
+    - CocoaLumberjack/Core (= 3.5.3)
+  - CocoaLumberjack/Core (3.5.3)
+  - CocoaLumberjack/Swift (3.5.3):
+    - CocoaLumberjack/Core
+  - Crashlytics (3.13.4):
+    - Fabric (~> 1.10.2)
+  - Eureka (4.3.1)
+  - Fabric (1.10.2)
+  - ICDMaterialActivityIndicatorView (0.1.3)
+  - ICSMainFramework (0.0.1)
+  - ICSPullToRefresh (0.6)
+  - ISO8601DateFormatter (0.8)
+  - KeychainAccess (3.2.0)
+  - KissXML (5.2.3)
+  - LibYAML (0.1.4)
+  - MBProgressHUD (1.1.0)
+  - MGSwipeTableCell (1.6.9)
+  - MMDrawerController (0.5.7):
+    - MMDrawerController/Core (= 0.5.7)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
+    - MMDrawerController/MMDrawerVisualStates (= 0.5.7)
+    - MMDrawerController/Subclass (= 0.5.7)
+  - MMDrawerController/Core (0.5.7)
+  - MMDrawerController/MMDrawerBarButtonItem (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.5.7):
+    - MMDrawerController/Core
+  - MMWormhole (2.0.0):
+    - MMWormhole/Core (= 2.0.0)
+  - MMWormhole/Core (2.0.0)
+  - ObjectMapper (3.5.1)
+  - PSOperations (5.0.1):
+    - PSOperations/Calendar (= 5.0.1)
+    - PSOperations/Core (= 5.0.1)
+    - PSOperations/Health (= 5.0.1)
+    - PSOperations/Location (= 5.0.1)
+    - PSOperations/Passbook (= 5.0.1)
+  - PSOperations/Calendar (5.0.1):
+    - PSOperations/Core
+  - PSOperations/Core (5.0.1)
+  - PSOperations/Health (5.0.1):
+    - PSOperations/Core
+  - PSOperations/Location (5.0.1):
+    - PSOperations/Core
+  - PSOperations/Passbook (5.0.1):
+    - PSOperations/Core
+  - PWAlipayPlugin (3.0.0):
+    - PWAlipayPlugin/Alipay (= 3.0.0)
+    - PWCoreSDK (>= 3.0.0)
+  - PWAlipayPlugin/Alipay (3.0.0):
+    - PWCoreSDK (>= 3.0.0)
+  - PWCardScannerPlugin (3.0.0):
+    - CardIO
+    - PWCoreSDK (>= 3.0.0)
+  - PWCoreSDK (3.0.0):
+    - PWCoreSDK/CoreSDK (= 3.0.0)
+  - PWCoreSDK/CoreSDK (3.0.0)
+  - PWGameUIPlugin (3.0.0):
+    - PWCoreSDK (>= 3.0.0)
+  - PWMyCardPlugin (3.0.0):
+    - PWCoreSDK (>= 3.0.0)
+  - PWWechatpayPlugin (3.0.0):
+    - PWCoreSDK (>= 3.0.0)
+    - PWWechatpayPlugin/Wechatpay (= 3.0.0)
+  - PWWechatpayPlugin/Wechatpay (3.0.0):
+    - PWCoreSDK (>= 3.0.0)
+  - Realm (2.10.2):
+    - Realm/Headers (= 2.10.2)
+  - Realm/Headers (2.10.2)
+  - RealmSwift (2.10.2):
+    - Realm (= 2.10.2)
+  - SDWebImage (5.1.1):
+    - SDWebImage/Core (= 5.1.1)
+  - SDWebImage/Core (5.1.1)
+  - SVGKit (2.1.0):
+    - CocoaLumberjack (~> 3.0)
+  - SwiftColor (1.4.0)
+  - VAProgressCircle (0.0.9)
+  - YAML-Framework (0.0.3):
+    - LibYAML (~> 0.1.4)
+  - YBAttributeTextTapAction (3.0.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper (~> 5.0)
+  - Appirater
+  - Aspects (from `./Library/Aspects/`)
+  - AsyncSwift
+  - CallbackURLKit
+  - CardIO
+  - Cartography
+  - CocoaAsyncSocket (~> 7.4.3)
+  - CocoaLumberjack/Swift
+  - Crashlytics
+  - Eureka
+  - Fabric
+  - ICDMaterialActivityIndicatorView (~> 0.1.0)
+  - ICSMainFramework (from `./Library/ICSMainFramework/`)
+  - ICSPullToRefresh
+  - ISO8601DateFormatter (~> 0.8)
+  - KeychainAccess
+  - KissXML (~> 5.2.2)
+  - MBProgressHUD
+  - MGSwipeTableCell
+  - MMDrawerController (~> 0.5.7)
+  - MMWormhole (~> 2.0.0)
+  - PSOperations
+  - PWAlipayPlugin (from `.`)
+  - PWCardScannerPlugin (from `.`)
+  - PWCoreSDK (from `.`)
+  - PWGameUIPlugin (from `.`)
+  - PWMyCardPlugin (from `.`)
+  - PWWechatpayPlugin (from `.`)
+  - RealmSwift (~> 2.10.2)
+  - SDWebImage
+  - SVGKit (from `https://github.com/SVGKit/SVGKit.git`, branch `2.x`)
+  - SwiftColor
+  - VAProgressCircle
+  - YAML-Framework (from `./Library/YAML-Framework`)
+  - YBAttributeTextTapAction
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - Appirater
+    - AsyncSwift
+    - CallbackURLKit
+    - CardIO
+    - Cartography
+    - CocoaAsyncSocket
+    - CocoaLumberjack
+    - Crashlytics
+    - Eureka
+    - Fabric
+    - ICDMaterialActivityIndicatorView
+    - ICSPullToRefresh
+    - ISO8601DateFormatter
+    - KeychainAccess
+    - KissXML
+    - LibYAML
+    - MBProgressHUD
+    - MGSwipeTableCell
+    - MMDrawerController
+    - MMWormhole
+    - ObjectMapper
+    - PSOperations
+    - Realm
+    - RealmSwift
+    - SDWebImage
+    - SwiftColor
+    - VAProgressCircle
+    - YBAttributeTextTapAction
+
+EXTERNAL SOURCES:
+  Aspects:
+    :path: "./Library/Aspects/"
+  ICSMainFramework:
+    :path: "./Library/ICSMainFramework/"
+  PWAlipayPlugin:
+    :path: "."
+  PWCardScannerPlugin:
+    :path: "."
+  PWCoreSDK:
+    :path: "."
+  PWGameUIPlugin:
+    :path: "."
+  PWMyCardPlugin:
+    :path: "."
+  PWWechatpayPlugin:
+    :path: "."
+  SVGKit:
+    :branch: 2.x
+    :git: https://github.com/SVGKit/SVGKit.git
+  YAML-Framework:
+    :path: "./Library/YAML-Framework"
+
+CHECKOUT OPTIONS:
+  SVGKit:
+    :commit: 4b507e48da30711e25d1bcdd19580f25887a2267
+    :git: https://github.com/SVGKit/SVGKit.git
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  Appirater: 44a4651f7912a17dc906b655f0c215d5bb768b84
+  Aspects: 8ac2b7220e45929088e0c5330397540577e65e6a
+  AsyncSwift: 65775a7b32e740609b24969ece3de58723b9dc3e
+  CallbackURLKit: 63d4ce4c79a0344179d7d5fd9c38175b732b8a6f
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  Cartography: c5626d29056b20f1e95c017326ee4df57cc39ad8
+  CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  Crashlytics: 2dfd686bcb918dc10ee0e76f7f853fe42c7bd552
+  Eureka: 28ea296f06710f6745266b71f17862048941a32d
+  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
+  ICDMaterialActivityIndicatorView: 52e3f11f27ebf0b53a7bc7725f416b1a182367b6
+  ICSMainFramework: e2cfdd3bac03573d48c890a70190e9bfac051ed8
+  ICSPullToRefresh: a64f102c6558cc34270ea60e99df7c91d1f3d2c0
+  ISO8601DateFormatter: 4551b6ce4f83185425f583b0b3feb3c7b59b942c
+  KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
+  KissXML: 09f88ff8161fd058d67b70740b8b516687b52823
+  LibYAML: 3af2c5adf3a40dff936d087aa6a77edc10036bc5
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MGSwipeTableCell: 17349a8b56c81245bd77671251eb8aa9d486d46b
+  MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
+  MMWormhole: 0cd3fd35a9118b2e2d762b499f54eeaace0be791
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  PSOperations: 41cb5799799d1af160cc8b5c802bfb0f28e251e6
+  PWAlipayPlugin: 6ce1847a70162382de6afcd7874b419f47093ee4
+  PWCardScannerPlugin: c69e8333e0b986dc8ec73ca9352024935b05f114
+  PWCoreSDK: 04dcd33c27b55e00d7e9c2d2e4b2872c65e5fc87
+  PWGameUIPlugin: 638643f55f8fc013de1ad1bee91bf2405fcc862f
+  PWMyCardPlugin: 9f7d4f02525eeadb55160d78cd029ba9ccc0cec6
+  PWWechatpayPlugin: 11933a7cdb420d358522c34871d8e49b235596f5
+  Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
+  RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
+  SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
+  SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
+  SwiftColor: 2b0fd15257981f23265f9939f311098159fe6d1c
+  VAProgressCircle: 7b58f21762a617ed764cf49e1251ab4643157e02
+  YAML-Framework: e63ac91e0494f10022bd311fa3f12d963f6233e7
+  YBAttributeTextTapAction: b7e61f0265b5673e7ce7bad7319e8eff9e209a2b
+
+PODFILE CHECKSUM: 95eccca0d83b8e948149dec7acc931bc52789545
+
+COCOAPODS: 1.5.2

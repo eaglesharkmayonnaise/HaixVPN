@@ -1,0 +1,15 @@
+[submodule "Library/ShadowPath/ShadowPath/shadowsocks-libev"]
+	path = Library/ShadowPath/ShadowPath/shadowsocks-libev
+	url = git@github.com:icodesign/shadowsocks-libev.git
+[submodule "Library/ShadowPath/ShadowPath/libmaxminddb"]
+	path = Library/ShadowPath/ShadowPath/libmaxminddb
+	url = git@github.com:haxpor/libmaxminddb.git
+[submodule "Library/Eureka"]
+	path = Library/Eureka
+	url = git@github.com:haxpor/Eureka.git
+[submodule "Library/CallbackURLKit"]
+	path = Library/CallbackURLKit
+	url = git@github.com:phimage/CallbackURLKit.git
+[submodule "Potatso/VPN/Tripartite/UseProtobuf/Protobuf/Proto_file"]
+	path = Potatso/VPN/Tripartite/UseProtobuf/Protobuf/Proto_file
+	url = https://github.com/AryaMask/pb_protocol.git

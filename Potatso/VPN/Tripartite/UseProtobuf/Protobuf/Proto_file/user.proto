@@ -1,0 +1,120 @@
+syntax = "proto2";
+
+import "common.proto";
+
+
+
+//CMD_DEVICE_REGISTER
+
+message UserRegisterRequest
+{
+    optional string username = 1;
+}
+
+
+//CMD_MESSAGE_SEND
+
+message MessageSendRequest
+{
+    repeated string targets = 1;
+    optional MessageInfo message = 2;
+}
+
+//CMD_MESSAGE_NOTIFY
+
+message MessageNotifyRequest
+{
+    optional MessageInfo message = 1;
+}
+
+
+message DeviceProto
+{
+    optional string device_id = 1;
+    optional string user_id = 2;
+    optional uint32 status = 3;
+    optional string app_version = 4;
+    optional string device_name = 5;
+    optional uint32 device_os = 6;
+    optional uint32 device_type = 7;
+    optional string ip = 8;
+    optional string location = 9;
+    optional string isp = 10;
+    optional string net_status = 11;
+    optional bool online = 12;
+    optional uint32 last_check = 13;
+    optional uint32 last_login = 14;
+    optional uint32 created = 15;
+}
+
+message UserProto
+{
+    optional string user_id = 1;
+    optional string phone = 2;
+    optional string nickname = 3;
+    optional uint32 status = 4;
+    optional uint32 role = 5;
+    optional uint32 created = 6;
+    optional uint32 remain_time = 7;
+}
+
+// INIT_REQUEST None
+
+message INIT_RESPONSE
+{
+    optional BaseResponse baseResponse = 1;
+    optional DeviceProto deviceResponse = 2;
+    optional UserProto userResponse = 3;
+}
+
+// NEED_REGISTER_DEVICE_REQUEST None
+
+message NEED_REGISTER_DEVICE_RESPONSE
+{
+    required BaseResponse baseResponse = 1;
+}
+
+
+message DEVICE_REGISTER_REQUEST
+{
+    required string device_id = 1;
+    required string app_version = 2;
+    required string device_name = 3;
+    required uint32 device_os = 4;
+    required uint32 device_type = 5;
+}
+
+message DEVICE_REGISTER_RESPONSE
+{
+    required BaseResponse baseResponse = 1;
+    optional DeviceProto deviceResponse = 2;
+}
+
+
+message DEVICE_UPDATE_REQUEST
+{
+    required string device_id = 1;
+    optional string user_id = 2;
+    optional uint32 status = 3;
+    optional string app_version = 4;
+    optional string device_name = 5;
+    optional uint32 device_os = 6;
+    optional uint32 device_type = 7;
+    optional string net_status = 8;
+}
+
+message DEVICE_UPDATE_RESPONSE
+{
+    required BaseResponse baseResponse = 1;
+    optional DeviceProto deviceResponse = 2;
+}
+
+message DEVICE_DELETE_REQUEST
+{
+    required string device_id = 1;
+}
+
+message DEVICE_DELETE_RESPONSE
+{
+    required BaseResponse baseResponse = 1;
+}
