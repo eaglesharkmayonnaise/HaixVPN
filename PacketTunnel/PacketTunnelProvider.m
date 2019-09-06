@@ -70,7 +70,7 @@
     [self startPacketForwarders];
     [self setupWormhole];
     
-    [NSTimer pltScheduledTimerWithTimeInterval:10.0 target:self selector:@selector(RestartVPN) userInfo:nil];
+//    [NSTimer pltScheduledTimerWithTimeInterval:10.0 target:self selector:@selector(RestartVPN) userInfo:nil];
 }
 
 - (void)updateUserDefaults {

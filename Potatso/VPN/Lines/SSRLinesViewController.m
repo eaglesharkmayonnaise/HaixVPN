@@ -17,7 +17,7 @@
 @end
 
 @implementation SSRLinesViewController{
-    UITableView *tabelviewALL;
+    UITableView *tableviewALL;
     NSDictionary *tabelviewALLdic;
     NSDictionary *Countrydic;
     NSArray  *stringArrayIP;
@@ -121,37 +121,42 @@ NSArray *allSubviews3(UIView *aView) {
     
     
     //Package套餐
-    tabelviewALL  = [[UITableView alloc]initWithFrame:CGRectMake(0,textSELECT.frame.size.height + textSELECT.frame.origin.y + 15, kscreenw,kscreenh - 260 *SJhight)];
-    tabelviewALL.delegate =self;
-    tabelviewALL.dataSource = self;
-    tabelviewALL.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    tabelviewALL.separatorColor = ViewBackColor;
-    [self.view addSubview:tabelviewALL];
-    tabelviewALL.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    tabelviewALL.separatorColor = [UIColor colorWithRed:0.89 green:0.93 blue:0.96 alpha:1];
-    [self setExtraCellLineHidden:tabelviewALL];
+    tableviewALL  = [[UITableView alloc]initWithFrame:CGRectMake(0,textSELECT.frame.size.height + textSELECT.frame.origin.y + 15, kscreenw,kscreenh - 260 *SJhight)];
+    tableviewALL.delegate =self;
+    tableviewALL.dataSource = self;
+    tableviewALL.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    tableviewALL.separatorColor = ViewBackColor;
+    [self.view addSubview:tableviewALL];
+    tableviewALL.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    tableviewALL.separatorColor = [UIColor colorWithRed:0.89 green:0.93 blue:0.96 alpha:1];
+    [self setExtraCellLineHidden:tableviewALL];
     
     //默认选第一行
     if([[NSUserDefaults standardUserDefaults] valueForKey:@"当前选择的线路"] == nil){
         [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"当前选择的线路"];
     }
     
+    tableviewALL.delegate = self;
+    tableviewALL.dataSource = self;
+    
+    tabelviewALLdic = [NSDictionary new];
+    
     //获取ss配置
     [NetworkApi Getusernodes:nil anddic:nil block:^(NSDictionary *responseObject) {
         [LCProgressHUD hide];
         
         Countrydic =  [[NSUserDefaults standardUserDefaults] valueForKey:@"CountryMap.json"][@"country"];
-        if (Countrydic == nil) {
-            //下载国家地址
-            [NetworkApi DownLoadCountryMapjson];
-            return ;
-        }
+//        if (Countrydic == nil) {
+//            //下载国家地址
+//            [NetworkApi DownLoadCountryMapjson];
+//            return ;
+//        }
         tabelviewALLdic = responseObject;
-        [tabelviewALL reloadData];
+//        [tabelviewALL reloadData];
         
-        if (![[tabelviewALLdic allKeys]  containsObject: @"hostname"]){
-            return;
-        }
+//        if (![[tabelviewALLdic allKeys]  containsObject: @"hostname"]){
+//            return;
+//        }
         
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             NSMutableArray * arrip = [[NSMutableArray alloc]init];
@@ -163,7 +168,7 @@ NSArray *allSubviews3(UIView *aView) {
                 [JFPingManager getFastestAddressWithAddressList:[arrip copy] finished:^(NSString * addresses) {
                     stringArrayIP = [addresses componentsSeparatedByString:@"-"];
                     NSLog(@"address:%@",stringArrayIP);
-                     [tabelviewALL reloadData];
+                     [tableviewALL reloadData];
                 }];
             });
         });
@@ -220,7 +225,7 @@ NSArray *allSubviews3(UIView *aView) {
     }
     
     [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%ld",newRow] forKey:@"当前选择的线路"];
-    [tabelviewALL reloadData];
+    [tableviewALL reloadData];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row == 0) {
@@ -300,9 +305,9 @@ NSArray *allSubviews3(UIView *aView) {
         });
 
     }else{
-          for (NSString *dic in Countrydic) { // 要判断是否包
-                if ([tabelviewALLdic[@"data"][@"nodes"][row - 1][@"country"] isEqualToString:dic]) {  // containsObject
-                    cell.Country.text = [NSString stringWithFormat:@"%@ - %@",Countrydic[dic][@"name"],tabelviewALLdic[@"data"][@"nodes"][row - 1][@"region"]];
+        for (NSString *dic in Countrydic) { // 要判断是否包
+            if ([tabelviewALLdic[@"data"][@"nodes"][row - 1][@"country"] isEqualToString:dic]) {  // containsObject
+                cell.Country.text = [NSString stringWithFormat:@"%@ - %@",Countrydic[dic][@"name"],tabelviewALLdic[@"data"][@"nodes"][row - 1][@"region"]];
             }
         }
         if ([cell.Country.text hasPrefix:@"America"]) {
@@ -337,14 +342,20 @@ NSArray *allSubviews3(UIView *aView) {
                 }
             }
         }
-    
+        
         
         if ([[tabelviewALLdic[@"data"][@"nodes"][row-1] allKeys]  containsObject: @"hostname"]){
             [JFPingManager getFastestAddressWithAddressList: @[tabelviewALLdic[@"data"][@"nodes"][row-1][@"hostname"]] finished:^(NSString * addresses) {
+                
+                NSDictionary *dic = tabelviewALLdic[@"data"][@"nodes"][row-1];
+                
                 stringArrayIP = [addresses componentsSeparatedByString:@"-"];
                 cell.CountryDelay.text = stringArrayIP[1];
+                cell.Country.text = dic[@"country"];
                 [cell.CountryDelay setHidden: NO];
                 [cell.LoadingWording stopAnimating];
+                
+                
                 
                 //已连接
                 if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"UB判断连接"] isEqualToString:@"1"]) {
@@ -373,7 +384,7 @@ NSArray *allSubviews3(UIView *aView) {
 
 //重新测试线路
 -(void)Retest{
-    [tabelviewALL reloadData];
+    [tableviewALL reloadData];
 }
 
 
