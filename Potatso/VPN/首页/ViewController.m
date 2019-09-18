@@ -135,6 +135,21 @@
             imagebtn.image = [UIImage imageNamed:@"United Kingdom"];
         }
     }
+    
+    btn.hidden = YES;
+    imagebtn.hidden = YES;
+    
+    [NetworkApi Getusernodes:nil anddic:nil block:^(NSDictionary *responseObject) {
+        NSArray *ary = responseObject[@"data"][@"nodes"];
+        for (int i = 0; i < ary.count; i++) {
+            NSString *country = ary[i][@"country"];
+            if ([country isEqualToString:@"jp"]) {
+                [[NSUserDefaults standardUserDefaults] setObject:ary[i] forKey:@"AryaLineConfiguration"];
+            }
+        }
+    } block:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -143,7 +158,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    
     self.title = @"";
     self.navigationController.navigationBar.barTintColor = RGBColor(200, 200, 200);
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
@@ -249,7 +264,9 @@
     [[self view] addSubview:RoundInsidebutun];
     
     //unblockmy icon
-    imageArrowbtn = [[UIImageView alloc] initWithFrame:CGRectMake( RoundInsidebutun.frame.origin.x + (140 *SJwidth - 87)/2, RoundInsidebutun.frame.origin.y + (140 *SJwidth - 54)/2, 87, 54)];
+//    imageArrowbtn = [[UIImageView alloc] initWithFrame:CGRectMake( RoundInsidebutun.frame.origin.x + (140 *SJwidth - 87)/2, RoundInsidebutun.frame.origin.y + (140 *SJwidth - 54)/2, RoundInsidebutun.bounds.size.width, RoundInsidebutun.bounds.size.height)];
+    imageArrowbtn = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, RoundInsidebutun.bounds.size.width/3*2, RoundInsidebutun.bounds.size.height/3*2)];
+    imageArrowbtn.center = RoundInsidebutun.center;
     imageArrowbtn.image = [UIImage imageNamed:@"DisConnectImage"];
     [imageArrowbtn setUserInteractionEnabled:YES];
     [[self view] addSubview:imageArrowbtn];
@@ -440,7 +457,7 @@
         layerbutun.opacity = 0.7;      //修改的
         RoundInsidebutun.frame = layerbutun.frame;
         RoundInsidebutun.layer.cornerRadius =RoundInsidebutun.frame.size.height/2.f;
-        imageArrowbtn.frame =CGRectMake(RoundInsidebutun.frame.origin.x + (140 *SJwidth - 87)/2, RoundInsidebutun.frame.origin.y + (140 *SJwidth - 54)/2, 87, 54);
+//        imageArrowbtn.frame =CGRectMake(RoundInsidebutun.frame.origin.x + (140 *SJwidth - 87)/2, RoundInsidebutun.frame.origin.y + (140 *SJwidth - 54)/2, 87, 54);
 
     }];
 }
@@ -464,7 +481,7 @@
         layerbutun.opacity = 0.7;      //修改的
         RoundInsidebutun.frame = layerbutun.frame;
         RoundInsidebutun.layer.cornerRadius =RoundInsidebutun.frame.size.height/2.f;
-        imageArrowbtn.frame = CGRectMake( RoundInsidebutun.frame.origin.x + (140 *SJwidth - 87)/2, RoundInsidebutun.frame.origin.y + (140 *SJwidth - 54)/2, 87, 54);
+//        imageArrowbtn.frame = CGRectMake( RoundInsidebutun.frame.origin.x + (140 *SJwidth - 87)/2, RoundInsidebutun.frame.origin.y + (140 *SJwidth - 54)/2, 87, 54);
     }];
 }
 
@@ -542,7 +559,7 @@
         layerbutun.opacity = 0.3;      //修改的
         RoundInsidebutun.frame = layerbutun.frame;
         RoundInsidebutun.layer.cornerRadius = RoundInsidebutun.frame.size.height/2.f;
-        imageArrowbtn.frame =CGRectMake( RoundInsidebutun.frame.origin.x + (140 *SJwidth- 20 - 67)/2, RoundInsidebutun.frame.origin.y + (140 *SJwidth - 12.5 - 41.5)/2, 67, 54-12.5);
+//        imageArrowbtn.frame =CGRectMake( RoundInsidebutun.frame.origin.x + (140 *SJwidth- 20 - 67)/2, RoundInsidebutun.frame.origin.y + (140 *SJwidth - 12.5 - 41.5)/2, 67, 54-12.5);
         
         //间隔两秒之后做出判断 测试
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

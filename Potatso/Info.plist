@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>UnblockMy</string>
+	<string>海峽VPN</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -30,7 +30,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>4</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -66,6 +66,14 @@
 	<string>需要授权</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Scan QRCode to import configuration</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>需要授权</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>需要授权</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>需要授权</string>
+	<key>NSLocationUsageDescription</key>
+	<string>需要授权</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>需要权限</string>
 	<key>NSPhotoLibraryUsageDescription</key>

@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "logo深色.png",
+      "filename" : "vpn_logo_connect-2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "logo深色@2x.png",
+      "filename" : "vpn_logo_connect.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "logo深色@3x.png",
+      "filename" : "vpn_logo_connect-1.png",
       "scale" : "3x"
     }
   ],
