@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SJBBaseTreeListViewController.h"
-@interface HelpViewController : SJBBaseTreeListViewController
+@interface HelpViewController : UIViewController
 ///创建自己的tableView和resultArray
 @property (strong, nonatomic) UITableView *myTableView;
 @property (strong, nonatomic) NSMutableArray *myResultArray;

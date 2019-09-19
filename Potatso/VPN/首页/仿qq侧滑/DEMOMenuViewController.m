@@ -322,11 +322,13 @@
     else if (indexPath.row == 2)
     {
         //加载网页
-        WYWebController *Devices = [WYWebController new];
-        Devices.url = @"http://help.aryamask.com/help";
-        [self.navigationController pushViewController:Devices animated:YES];
+//        WYWebController *Devices = [WYWebController new];
+//        Devices.url = @"https://www.haixvpn.com";
+//        [self.navigationController pushViewController:Devices animated:YES];
         
-//        HelpViewController * Devices = [HelpViewController new];
+//        NewHelpViewController *Devices = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"NewHelpViewController"];
+        
+        HelpViewController * Devices = [HelpViewController new];
         //拿到我们的LitterLCenterViewController，让它去push
         UINavigationController* nav = (UINavigationController*)self.mm_drawerController.centerViewController;
         [nav pushViewController:Devices animated:NO];
@@ -339,7 +341,7 @@
     else
     {
         WYWebController *Devices = [WYWebController new];
-        Devices.url = @"http://help.aryamask.com/about";
+        Devices.url = @"https://www.haixvpn.com/help";
         [self.navigationController pushViewController:Devices animated:YES];
         
 //        AboutViewController * Devices = [AboutViewController new];

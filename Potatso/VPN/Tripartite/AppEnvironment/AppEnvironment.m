@@ -292,7 +292,7 @@
 }
 
 +(NSUserDefaults *)SetuserDefaultsGroup{
-    return [[NSUserDefaults alloc] initWithSuiteName:@"group.unblockmy.ios"];
+    return [[NSUserDefaults alloc] initWithSuiteName:@"group.com.haixvpn.chinese.net"];
 }
 
 
@@ -549,7 +549,7 @@ static ZJAnimationPopView* popView;
 //获得连接时间的时长
 +(NSString *)GetNowTime{
     if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"UB判断连接"] isEqualToString:@"1"]) {
-        NSString* timestr = [NSString stringWithFormat:@"%@",[[[NSUserDefaults alloc] initWithSuiteName:@"group.unblockmy.ios"] valueForKey:@"startTime"]];
+        NSString* timestr = [NSString stringWithFormat:@"%@",[[[NSUserDefaults alloc] initWithSuiteName:@"group.com.haixvpn.chinese.net"] valueForKey:@"startTime"]];
         int time = [timestr intValue];
         if (time <= 1) {
             return @"0000-00-00 00:00:00:00";;

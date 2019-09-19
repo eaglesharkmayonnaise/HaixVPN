@@ -39,7 +39,7 @@
 
 -(void)RestartVPN{
     // 时间比较
-    NSString *createdAtString =  [[[NSUserDefaults alloc] initWithSuiteName:@"group.unblockmy.ios"] valueForKey:@"SaveUserTime_tunl"];;
+    NSString *createdAtString =  [[[NSUserDefaults alloc] initWithSuiteName:@"group.com.haixvpn.chinese.net"] valueForKey:@"SaveUserTime_tunl"];;
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     NSDate *createdAtDate = [fmt dateFromString:createdAtString];

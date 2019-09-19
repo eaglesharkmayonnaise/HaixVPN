@@ -568,7 +568,7 @@
     }];
     
     // 保存可连接
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.unblockmy.ios"];
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.haixvpn.chinese.net"];
     [shared setObject:@"可连" forKey:@"设置可连or不可连"];
     [shared synchronize];
     [SAMKeychain setPassword:@"可连" forService:@"设置不可连" account:@"设置不可连"];

@@ -84,7 +84,7 @@
     
     [SAMKeychain setPassword:@"NO" forService:@"设置不可连" account:@"设置不可连"];
     // 保存
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.unblockmy.ios"];
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.haixvpn.chinese.net"];
     [shared setObject:@"不可连" forKey:@"设置可连or不可连"];
     [shared synchronize];
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -96,7 +96,7 @@
     
     [SAMKeychain setPassword:@"NO" forService:@"设置不可连" account:@"设置不可连"];
     // 保存
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.unblockmy.ios"];
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.haixvpn.chinese.net"];
     [shared setObject:@"不可连" forKey:@"设置可连or不可连"];
     [shared synchronize];
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
@@ -107,7 +107,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     [SAMKeychain setPassword:@"NO" forService:@"设置不可连" account:@"设置不可连"];
     // 保存
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.unblockmy.ios"];
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.haixvpn.chinese.net"];
     [shared setObject:@"不可连" forKey:@"设置可连or不可连"];
     [shared synchronize];
     
@@ -124,7 +124,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     [SAMKeychain setPassword:@"NO" forService:@"设置不可连" account:@"设置不可连"];
     // 保存
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.unblockmy.ios"];
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.haixvpn.chinese.net"];
     [shared setObject:@"不可连" forKey:@"设置可连or不可连"];
     [shared synchronize];
     

@@ -44,37 +44,38 @@
     
     NSMutableArray *country1 = [NSMutableArray arrayWithObjects:cityDict1, nil];
     NSMutableDictionary *countryDict1 = [NSMutableDictionary dictionaryWithObject:country1 forKey:self.rowListTitle];
-    [countryDict1 setObject:@"Why cann’t connect？" forKey:self.sectionListName];
+    [countryDict1 setObject:@"1.若無法連接VPN:" forKey:self.sectionListName];
     
     ///另一个国家放令两个城市。
     NSMutableDictionary *cityDict21 = [NSMutableDictionary dictionary];
     [cityDict21 setObject:@"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco." forKey:self.rowListName];
     NSMutableArray *country2 = [NSMutableArray arrayWithObjects:cityDict21, nil];
     NSMutableDictionary *countryDict2 = [NSMutableDictionary dictionaryWithObject:country2 forKey:self.rowListTitle];
-    [countryDict2 setObject:@"Lorem ipsum dolor sit amet？" forKey:self.sectionListName];
+    [countryDict2 setObject:@"2.若遇上VPN以連線,但無法連上網路的狀況:" forKey:self.sectionListName];
     
     //解释3
     NSMutableDictionary *info3 = [NSMutableDictionary dictionary];
     [info3 setObject:@"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco." forKey:self.rowListName];
     NSMutableArray *infoBT3 = [NSMutableArray arrayWithObjects:info3, nil];
     NSMutableDictionary *infoTitledic3 = [NSMutableDictionary dictionaryWithObject:infoBT3 forKey:self.rowListTitle];
-    [infoTitledic3 setObject:@"Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do ？" forKey:self.sectionListName];
+    [infoTitledic3 setObject:@"3.其他:" forKey:self.sectionListName];
     
     //解释4
-    NSMutableDictionary *info4 = [NSMutableDictionary dictionary];
-    [info4 setObject:@"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco." forKey:self.rowListName];
-    NSMutableArray *infoBT4 = [NSMutableArray arrayWithObjects:info4, nil];
-    NSMutableDictionary *infoTitledic4 = [NSMutableDictionary dictionaryWithObject:infoBT4 forKey:self.rowListTitle];
-    [infoTitledic4 setObject:@"Quis nostrud exercitation ut aliquip ex ea commodo？" forKey:self.sectionListName];
+//    NSMutableDictionary *info4 = [NSMutableDictionary dictionary];
+//    [info4 setObject:@"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco." forKey:self.rowListName];
+//    NSMutableArray *infoBT4 = [NSMutableArray arrayWithObjects:info4, nil];
+//    NSMutableDictionary *infoTitledic4 = [NSMutableDictionary dictionaryWithObject:infoBT4 forKey:self.rowListTitle];
+//    [infoTitledic4 setObject:@"Quis nostrud exercitation ut aliquip ex ea commodo？" forKey:self.sectionListName];
+//
+//    //解释5
+//    NSMutableDictionary *info5 = [NSMutableDictionary dictionary];
+//    [info5 setObject:@"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco." forKey:self.rowListName];
+//    NSMutableArray *infoBT5 = [NSMutableArray arrayWithObjects:info5, nil];
+//    NSMutableDictionary *infoTitledic5 = [NSMutableDictionary dictionaryWithObject:infoBT5 forKey:self.rowListTitle];
+//    [infoTitledic5 setObject:@"Quis nostrud exercitation ut aliquip ex ea commodo？" forKey:self.sectionListName];
     
-    //解释5
-    NSMutableDictionary *info5 = [NSMutableDictionary dictionary];
-    [info5 setObject:@"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco." forKey:self.rowListName];
-    NSMutableArray *infoBT5 = [NSMutableArray arrayWithObjects:info5, nil];
-    NSMutableDictionary *infoTitledic5 = [NSMutableDictionary dictionaryWithObject:infoBT5 forKey:self.rowListTitle];
-    [infoTitledic5 setObject:@"Quis nostrud exercitation ut aliquip ex ea commodo？" forKey:self.sectionListName];
-    
-    self.treeResultArray = [NSMutableArray arrayWithObjects:countryDict1,countryDict2,infoTitledic3,infoTitledic4, infoTitledic5,nil];
+//    self.treeResultArray = [NSMutableArray arrayWithObjects:countryDict1,countryDict2,infoTitledic3,infoTitledic4, infoTitledic5,nil];
+    self.treeResultArray = [NSMutableArray arrayWithObjects:countryDict1,countryDict2,infoTitledic3,nil];
     
     ///原来下面几句都在viewDidLoad 里面，所以很卡。。。
     if (self.treeTableView==nil||self.treeTableView==NULL) {
