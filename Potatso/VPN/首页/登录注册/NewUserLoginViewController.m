@@ -77,7 +77,7 @@
     //LOG IN
     UILabel *labephonenum = [[UILabel alloc]initWithFrame:CGRectMake(0 , SJhight * 106, kscreenw, 30)];
     labephonenum.font = [UIFont fontWithName:@"SourceSansPro-bold" size:32];
-    labephonenum.text = @"LOG IN";
+    labephonenum.text = @"登入";
     labephonenum.textColor = [UIColor whiteColor];
     labephonenum.textAlignment =1;
     [self.view addSubview:labephonenum];
@@ -85,7 +85,7 @@
     //验证码解释
     UILabel *labephoneinfo= [[UILabel alloc]initWithFrame:CGRectMake(20 , SJhight * 158, kscreenw -40, 35)];
     labephoneinfo.font = [UIFont fontWithName:@"SourceSansPro-Regular" size:16];
-    labephoneinfo.text = @"Please enter the password to login";
+    labephoneinfo.text = @"請輸入密碼";
     labephoneinfo.numberOfLines=0;
     labephoneinfo.textColor = [UIColor whiteColor];
     labephoneinfo.textAlignment =1;
@@ -99,7 +99,7 @@
     textpwd.textColor = [UIColor whiteColor];
     textpwd.font =[UIFont fontWithName:@"SourceSansPro-bold" size:24];
     textpwd.text= @"";
-    textpwd.placeholder = @"enter your password";
+    textpwd.placeholder = @"請輸入密碼";
     [textpwd setValue:RGB_color(255, 255, 255, 0.3) forKeyPath:@"_placeholderLabel.textColor"];
     textpwd.delegate =self;
     textpwd.clearButtonMode = UITextFieldViewModeAlways;
@@ -117,13 +117,13 @@
     UIButton *labeForget= [[UIButton alloc]initWithFrame:CGRectMake(0 , layer1.frame.size.height + layer1.frame.origin.y + 20, kscreenw , 20)];
     labeForget.titleLabel.font = [UIFont fontWithName:@"SourceSansPro-Regular" size:16];
     [labeForget addTarget:self action:@selector(labeForget) forControlEvents:UIControlEventTouchUpInside];
-    [labeForget setTitle:@"Forget Passworld ?" forState:0];
+    [labeForget setTitle:@"忘記密碼？" forState:0];
     labeForget.alpha = 1.0;
     [self.view addSubview:labeForget];
     
     btnYZM = [[UIButton alloc]initWithFrame:CGRectMake(0 , labeForget.frame.size.height + labeForget.frame.origin.y + 20, kscreenw, 50)];
     btnYZM.titleLabel.font = [UIFont fontWithName:@"SourceSansPro-bold" size:37];
-    [btnYZM setTitle:@"LOG IN" forState:0];
+    [btnYZM setTitle:@"登入" forState:0];
     btnYZM.alpha = 0.3;
     [btnYZM addTarget:self action:@selector(loginNew) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnYZM];

@@ -46,7 +46,7 @@
     //手机号码
     UILabel *labephonenum = [[UILabel alloc]initWithFrame:CGRectMake(0 , SJhight * 106, kscreenw, 30)];
     labephonenum.font = [UIFont fontWithName:@"SourceSansPro-bold" size:32];
-    labephonenum.text = @"LOG IN";
+    labephonenum.text = @"登入";
     labephonenum.textColor = [UIColor whiteColor];
     labephonenum.textAlignment =1;
     [self.view addSubview:labephonenum];
@@ -54,7 +54,7 @@
     //手机号码解释
     UILabel *labephoneinfo= [[UILabel alloc]initWithFrame:CGRectMake(20 , SJhight * 158, kscreenw -40, 35)];
     labephoneinfo.font = [UIFont fontWithName:@"SourceSansPro-Regular" size:16.f];
-    labephoneinfo.text = @"Please enter your email to login";
+    labephoneinfo.text = @"使用 email 登入";
     labephoneinfo.numberOfLines=0;
     labephoneinfo.textColor = [UIColor whiteColor];
     labephoneinfo.textAlignment =1;
@@ -94,7 +94,7 @@
     NextBtn.layer.cornerRadius = 20;
     NextBtn.backgroundColor = [UIColor whiteColor];
     [NextBtn setTitleColor:[UIColor colorWithRed:0.46 green:0.59 blue:1 alpha:1] forState:0];
-    [NextBtn setTitle:@"Next" forState:0];
+    [NextBtn setTitle:@"下一步" forState:0];
     NextBtn.titleLabel.font = [UIFont fontWithName:@"SourceSansPro-Regular" size:20];
     [NextBtn addTarget:self action:@selector(SendSMS) forControlEvents:UIControlEventTouchUpInside];
     [[self view] addSubview:NextBtn];
@@ -103,13 +103,13 @@
     labedianji.textColor = [UIColor whiteColor];
     labedianji.userInteractionEnabled =YES;
     labedianji.textAlignment=1;
-    NSString *label_text2 = @"Login Agreements Compliance with Aryaline Privacy Policy";
+    NSString *label_text2 = @"登入及代表您同意海峽VPN的使用者條款";
     NSMutableAttributedString *attributedString2 = [[NSMutableAttributedString alloc]initWithString:label_text2];
     [attributedString2 addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(label_text2.length -14, 14)];
     [attributedString2 addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"SourceSansPro-bold" size:14] range:NSMakeRange(label_text2.length -14, 14)];
     [attributedString2 addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"PingFangSC-Regular" size:12] range:NSMakeRange(0, label_text2.length)];
     //下划线
-    [attributedString2 addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:NSMakeRange(label_text2.length -14, 14)];
+    [attributedString2 addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:NSMakeRange(label_text2.length -12, 12)];
     labedianji.attributedText = attributedString2;
     
     [labedianji yb_addAttributeTapActionWithStrings:@[@"Privacy Policy",@"service"] tapClicked:^(UILabel *label, NSString *string, NSRange range, NSInteger index) {

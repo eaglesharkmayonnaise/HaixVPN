@@ -153,17 +153,19 @@
     [[self view] addSubview:UserExpired];
 
     
-    UILabel *labelWelcom1= [[UILabel alloc] initWithFrame:CGRectMake(0, 444 * SJhight + 56, kscreenw, 500)];
+//    UILabel *labelWelcom1= [[UILabel alloc] initWithFrame:CGRectMake(0, 444 * SJhight + 56, kscreenw, 500)];
+    UILabel *labelWelcom1= [[UILabel alloc] initWithFrame:CGRectMake(0, kscreenh*0.6, kscreenw, 25)];
     labelWelcom1.backgroundColor = makecolor(218, 218, 218);
     [self.view addSubview:labelWelcom1];
     
     //退出按钮
-    UILabel *labelExitBJ= [[UILabel alloc] initWithFrame:CGRectMake(0, 519.5 * SJhight - 16, kscreenw, 57)];
+//    UILabel *labelExitBJ= [[UILabel alloc] initWithFrame:CGRectMake(0, 519.5 * SJhight - 16, kscreenw, 57)];
+    UILabel *labelExitBJ= [[UILabel alloc] initWithFrame:CGRectMake(0, kscreenh*0.6+30, kscreenw, 57)];
     labelExitBJ.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:labelExitBJ];
     UIButton *btnExitBJ = [[UIButton alloc] initWithFrame:CGRectMake(25 *SJwidth, labelExitBJ.frame.origin.y + 10, 80, 36)];
     btnExitBJ.backgroundColor = [UIColor whiteColor];
-    [btnExitBJ setTitle:@"Log Out" forState:0];
+    [btnExitBJ setTitle:@"登出" forState:0];
     [btnExitBJ addTarget:self action:@selector(LogOut) forControlEvents:UIControlEventTouchUpInside];
     [btnExitBJ setImage:[UIImage imageNamed:@"logout"] forState:0];
     btnExitBJ.titleLabel.font = [UIFont systemFontOfSize:15.f];
@@ -174,13 +176,13 @@
     //backview
     UILabel *labelback2= [[UILabel alloc] initWithFrame:CGRectMake(0, btnExitBJ.frame.size.height + btnExitBJ.frame.origin.y, kscreenw, 200)];
     labelback2.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:labelback2];
+//    [self.view addSubview:labelback2];
     
     //版本号
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(30,kscreenh - 60, 0, 24)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(30,kscreenh*0.85, 0, 24)];
     NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
     NSString *appVersion = [infoDic objectForKey:@"CFBundleShortVersionString"];
-    label.text = [NSString stringWithFormat:@"Version %@",appVersion];
+    label.text = [NSString stringWithFormat:@"版本： %@",appVersion];
     label.font = [UIFont systemFontOfSize:14];
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor colorWithRed:0.5 green:0.55 blue:0.65 alpha:1.0f];
@@ -290,34 +292,34 @@
             [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
         }];
     }
+//    else if (indexPath.row == 2)
+//    {
+//        MyOrdersViewController *Devices = [MyOrdersViewController new];
+//        [self.navigationController pushViewController:Devices animated:YES];
+//
+////        CouponsViewController * Devices = [CouponsViewController new]; // 邀请卡的页面
+//        //拿到我们的LitterLCenterViewController，让它去push
+//        UINavigationController* nav = (UINavigationController*)self.mm_drawerController.centerViewController;
+//        [nav pushViewController:Devices animated:NO];
+//        //当我们push成功之后，关闭我们的抽屉
+//        [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
+//            //设置打开抽屉模式为MMOpenDrawerGestureModeNone，也就是没有任何效果。
+//            [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
+//        }];
+//    }
+//    else if (indexPath.row == 3)
+//    {
+//        InviteFriendsViewController * Devices = [InviteFriendsViewController new];
+//        //拿到我们的LitterLCenterViewController，让它去push
+//        UINavigationController* nav = (UINavigationController*)self.mm_drawerController.centerViewController;
+//        [nav pushViewController:Devices animated:NO];
+//        //当我们push成功之后，关闭我们的抽屉
+//        [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
+//            //设置打开抽屉模式为MMOpenDrawerGestureModeNone，也就是没有任何效果。
+//            [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
+//        }];
+//    }
     else if (indexPath.row == 2)
-    {
-        MyOrdersViewController *Devices = [MyOrdersViewController new];
-        [self.navigationController pushViewController:Devices animated:YES];
-        
-//        CouponsViewController * Devices = [CouponsViewController new]; // 邀请卡的页面
-        //拿到我们的LitterLCenterViewController，让它去push
-        UINavigationController* nav = (UINavigationController*)self.mm_drawerController.centerViewController;
-        [nav pushViewController:Devices animated:NO];
-        //当我们push成功之后，关闭我们的抽屉
-        [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
-            //设置打开抽屉模式为MMOpenDrawerGestureModeNone，也就是没有任何效果。
-            [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
-        }];
-    }
-    else if (indexPath.row == 3)
-    {
-        InviteFriendsViewController * Devices = [InviteFriendsViewController new];
-        //拿到我们的LitterLCenterViewController，让它去push
-        UINavigationController* nav = (UINavigationController*)self.mm_drawerController.centerViewController;
-        [nav pushViewController:Devices animated:NO];
-        //当我们push成功之后，关闭我们的抽屉
-        [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
-            //设置打开抽屉模式为MMOpenDrawerGestureModeNone，也就是没有任何效果。
-            [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
-        }];
-    }
-    else if (indexPath.row == 4)
     {
         //加载网页
         WYWebController *Devices = [WYWebController new];
@@ -368,7 +370,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex{
     
-    return 6;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -381,7 +383,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
 
-    NSArray *titles = @[@"My Plan", @"Devices", @"Invoice",@"Invite Friends", @"Help", @"About"];
+    NSArray *titles = @[@"我的方案", @"裝置", @"幫助", @"關於"];
 //    cell.imageView.image = [UIImage imageNamed:titles[indexPath.row]];
     UIImage*icon = [UIImage imageNamed:titles[indexPath.row]];
     CGSize itemSize = CGSizeMake(24, 24);

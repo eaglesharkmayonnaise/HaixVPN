@@ -190,7 +190,7 @@
     RightBtn.frame = CGRectMake(kscreenw - 50 - 5, 25 , 50, 50);
     [RightBtn setImage:[UIImage imageNamed:@"BuyPackage"] forState:UIControlStateNormal];
     [RightBtn addTarget:self action:@selector(BuyPackage) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:RightBtn];
+//    [self.view addSubview:RightBtn];
     
     //水波
     imagegif = [[GifView alloc]initWithFrame:CGRectMake(-20,kscreenh-170, kscreenw + 40 , 170) filePath:[[NSBundle mainBundle] pathForResource:@"水波动画.gif"ofType:nil]];
@@ -208,7 +208,7 @@
     Remaininglabe = [[UILabel alloc] initWithFrame:CGRectMake(0, 80 *SJhight, kscreenw, 22)];
     Remaininglabe.textColor = [UIColor whiteColor];
     Remaininglabe.textAlignment =1;
-    Remaininglabe.text = @"Status: Not Connected";
+    Remaininglabe.text = @"狀態: 未連接";
     Remaininglabe.font = [UIFont fontWithName:@"SourceSansPro-Regular" size:20];
     [[self view] addSubview:Remaininglabe];
 
@@ -437,13 +437,13 @@
 //连接中
 -(void)Connectteding{
    [LCProgressHUD hide];
-    Remaininglabe.text = @"Status: Connecting";
+    Remaininglabe.text = @"狀態: 連接中";
    imageArrowbtn.image = [UIImage imageNamed:@"DisConnectImage"];
 }
 
 //已连接
 -(void)Connectted{
-    Remaininglabe.text = @"Status: Connected";
+    Remaininglabe.text = @"狀態: 已連接";
     imageArrowbtn.image = [UIImage imageNamed:@"ConnectImage"];
 
     // 将大图动画回小图的位置和大小
@@ -465,7 +465,7 @@
 //未连接
 -(void)Disconnceted{
     
-    Remaininglabe.text = @"Status: DisConnected";
+    Remaininglabe.text = @"狀態: 未連接";
     [LCProgressHUD hide];
     imageArrowbtn.image = [UIImage imageNamed:@"DisConnectImage"];
     progressCircle.hidden = YES;

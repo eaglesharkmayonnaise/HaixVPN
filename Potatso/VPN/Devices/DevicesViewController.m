@@ -31,7 +31,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Devices";
+    self.title = @"裝置";
     self.view.backgroundColor = makecolor(218, 218, 218);
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:0.22 green:0.27 blue:0.34 alpha:1],NSFontAttributeName:[UIFont fontWithName:@"SourceSansPro-bold" size:16]}];

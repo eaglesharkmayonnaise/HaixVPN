@@ -54,7 +54,7 @@
 
     //标题
     UILabel *labeBT = [[UILabel alloc]initWithFrame:CGRectMake(25,94*SJhight, 250, 48)];
-    labeBT.text =@"My Plan";
+    labeBT.text =@"我的方案";
     labeBT.font = [UIFont fontWithName:@"SourceSansPro-bold" size:34];
     [self.view addSubview:labeBT];
     
@@ -113,7 +113,7 @@
     //Ayraline
     UILabel *labeAyraline = [[UILabel alloc] initWithFrame:CGRectMake( kscreenw - 120 - 20  , 272*SJhight , 100, 14)];
     labeAyraline.textAlignment = 2;
-    labeAyraline.text = @"Ayraline";
+    labeAyraline.text = @"HaixVPN";
     labeAyraline.font = [UIFont fontWithName:@"PingFangSC-Regular" size:14];
     labeAyraline.textColor = [UIColor whiteColor];
     [self.view addSubview:labeAyraline];
@@ -123,7 +123,7 @@
     LabelPlanLable.backgroundColor = [UIColor whiteColor];
     [[self view] addSubview:LabelPlanLable];
     UILabel *textCurrentPlan = [[UILabel alloc] initWithFrame:CGRectMake(20, 344 * SJhight, 150, 16)];
-    textCurrentPlan.text =@"Current Plan";
+    textCurrentPlan.text =@"當前方案";
     textCurrentPlan.font = [UIFont fontWithName:@"PingFangSC-Regular" size:16];
     textCurrentPlan.textColor = [UIColor colorWithRed:0.22 green:0.27 blue:0.34 alpha:1];
     [self.view addSubview:textCurrentPlan];
@@ -138,7 +138,7 @@
     btnUpgrade.titleLabel.font = [UIFont fontWithName:@"SourceSansPro-bold" size:14];
     [btnUpgrade setTitle:@"Buy" forState:0];
     if (LoginInfoResponse[@"data"][@"plan"][@"MYPlan_ Formal"] == 0) { //试用用户
-        [btnUpgrade setTitle:@"Renew" forState:0];;
+        [btnUpgrade setTitle:@"購買" forState:0];;
     }
     [btnUpgrade setTitleColor:ZTblue forState:0];
     btnUpgrade.layer.masksToBounds = YES;
@@ -151,7 +151,7 @@
     LabelService.backgroundColor = [UIColor whiteColor];
     [[self view] addSubview:LabelService];
     UILabel *textService = [[UILabel alloc] initWithFrame:CGRectMake(20, 424 * SJhight, 150, 16)];
-    textService.text =@"Service Duration";
+    textService.text =@"服務區間";
     textService.font = [UIFont fontWithName:@"PingFangSC-Regular" size:16];
     textService.textColor = [UIColor colorWithRed:0.22 green:0.27 blue:0.34 alpha:1];
     [self.view addSubview:textService];
@@ -166,7 +166,7 @@
     LabelDevicesQuantity.backgroundColor = [UIColor whiteColor];
     [[self view] addSubview:LabelDevicesQuantity];
     UILabel *textDevices = [[UILabel alloc] initWithFrame:CGRectMake(20, 504 * SJhight, 150, 16)];
-    textDevices.text =@"Devices Quantity";
+    textDevices.text =@"裝置數量";
     textDevices.font = [UIFont fontWithName:@"PingFangSC-Regular" size:16];
     textDevices.textColor = [UIColor colorWithRed:0.22 green:0.27 blue:0.34 alpha:1];
     [self.view addSubview:textDevices];

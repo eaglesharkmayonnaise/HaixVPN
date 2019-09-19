@@ -61,7 +61,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    infostr =@"Resend";
+    infostr =@"重新傳送";
     [LCProgressHUD showSuccess:@"获取验证码成功"];
     gradientLayer1 = [CAGradientLayer layer];
     gradientLayer1.frame = self.view.bounds;
@@ -87,7 +87,7 @@
     //验证码
     UILabel *labephonenum = [[UILabel alloc]initWithFrame:CGRectMake(0 , SJhight * 106, kscreenw, 30)];
     labephonenum.font = [UIFont fontWithName:@"SourceSansPro-bold" size:32];
-    labephonenum.text = @"Verification Code";
+    labephonenum.text = @"確認碼";
     labephonenum.textColor = [UIColor whiteColor];
     labephonenum.textAlignment =1;
     [self.view addSubview:labephonenum];
@@ -95,7 +95,7 @@
     //验证码解释
     UILabel *labephoneinfo= [[UILabel alloc]initWithFrame:CGRectMake(20 , SJhight * 158, kscreenw -40, 60)];
     labephoneinfo.font = [UIFont fontWithName:@"SourceSansPro-bold" size:16];
-    labephoneinfo.text = [NSString stringWithFormat:@"%@%@",@"Please type the verification code\n sent to ",self.PhoneNum];
+    labephoneinfo.text = [NSString stringWithFormat:@"%@%@",@"請輸入驗證碼,已寄送到\n ",self.PhoneNum];
     labephoneinfo.numberOfLines=2;
     labephoneinfo.textColor = [UIColor whiteColor];
     labephoneinfo.textAlignment =1;
@@ -268,7 +268,7 @@
             dispatch_source_cancel(timerCountdown);
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                [btnYZM setTitle:@"Resend" forState:0];
+                [btnYZM setTitle:@"重新傳送" forState:0];
                 [btnYZM setTitleColor:[UIColor whiteColor] forState:0];
                 btnYZM.userInteractionEnabled=YES;
             });
