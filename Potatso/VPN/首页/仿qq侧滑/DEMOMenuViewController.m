@@ -338,22 +338,22 @@
             [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
         }];
     }
-    else
-    {
-        WYWebController *Devices = [WYWebController new];
-        Devices.url = @"https://www.haixvpn.com/help";
-        [self.navigationController pushViewController:Devices animated:YES];
-        
-//        AboutViewController * Devices = [AboutViewController new];
-        //拿到我们的LitterLCenterViewController，让它去push
-        UINavigationController* nav = (UINavigationController*)self.mm_drawerController.centerViewController;
-        [nav pushViewController:Devices animated:NO];
-        //当我们push成功之后，关闭我们的抽屉
-        [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
-            //设置打开抽屉模式为MMOpenDrawerGestureModeNone，也就是没有任何效果。
-            [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
-        }];
-    }
+//    else
+//    {
+//        WYWebController *Devices = [WYWebController new];
+//        Devices.url = @"https://www.haixvpn.com/help";
+//        [self.navigationController pushViewController:Devices animated:YES];
+//
+////        AboutViewController * Devices = [AboutViewController new];
+//        //拿到我们的LitterLCenterViewController，让它去push
+//        UINavigationController* nav = (UINavigationController*)self.mm_drawerController.centerViewController;
+//        [nav pushViewController:Devices animated:NO];
+//        //当我们push成功之后，关闭我们的抽屉
+//        [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
+//            //设置打开抽屉模式为MMOpenDrawerGestureModeNone，也就是没有任何效果。
+//            [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
+//        }];
+//    }
 
 }
 
@@ -372,7 +372,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex{
     
-    return 4;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -385,7 +385,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
 
-    NSArray *titles = @[@"我的方案", @"裝置", @"幫助", @"關於"];
+    NSArray *titles = @[@"我的方案", @"裝置", @"幫助"];
 //    cell.imageView.image = [UIImage imageNamed:titles[indexPath.row]];
     UIImage*icon = [UIImage imageNamed:titles[indexPath.row]];
     CGSize itemSize = CGSizeMake(24, 24);
