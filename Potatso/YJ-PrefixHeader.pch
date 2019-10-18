@@ -42,7 +42,8 @@
 #import "UILabel+YBAttributeTextTapAction.h"
 #import "MonitorFlow.h"
 //#define AryamaskUrl @"http://testapi.aryamask.com/v1.0/api/"
-#define AryamaskUrl @"https://haixapp.com/v1.0/api/"
+//#define AryamaskUrl @"https://haixapp.com/v1.0/api/"
+#define AryamaskUrl @"http://106.75.164.41/v1.0/api/"
 #import "SDWebImageManager.h"
 #import "UIImageView+WebCache.h"
 #import <CommonCrypto/CommonDigest.h>

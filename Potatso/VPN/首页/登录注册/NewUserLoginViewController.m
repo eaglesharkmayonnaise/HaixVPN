@@ -198,7 +198,7 @@
         
         //获取ss配置
         [NetworkApi Getusernodes:nil anddic:nil block:^(NSDictionary *responseObject) {
-            [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"data"][@"nodes"][0] forKey:@"AryaLineConfiguration"];
+//            [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"data"][@"nodes"][0] forKey:@"AryaLineConfiguration"];
         } block:^(NSError *error) {}];
         
         [self closeview];

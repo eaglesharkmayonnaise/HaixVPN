@@ -139,17 +139,93 @@
     btn.hidden = YES;
     imagebtn.hidden = YES;
     
-    [NetworkApi Getusernodes:nil anddic:nil block:^(NSDictionary *responseObject) {
-        NSArray *ary = responseObject[@"data"][@"nodes"];
-        for (int i = 0; i < ary.count; i++) {
-            NSString *country = ary[i][@"country"];
-            if ([country isEqualToString:@"jp"]) {
-                [[NSUserDefaults standardUserDefaults] setObject:ary[i] forKey:@"AryaLineConfiguration"];
-            }
-        }
-    } block:^(NSError *error) {
-        NSLog(@"%@", error);
-    }];
+    //TODO: 寫入固定VPM位置
+    ///原海峽節點 日本
+//    NSDictionary *proxyDic = @{@"port":@"33445",
+//                               @"enable":@"YES",
+//                               @"protocol_param":@"",
+//                               @"method":@"aes-256-cfb",
+//                               @"obfs":@"plain",
+//                               @"protocol":@"origin",
+//                               @"user":@"5c51819c320c861715df3306",
+//                               @"username":@"haix2019@gmail.com",
+//                               @"hostname":@"hsgaws92.haixapp.com",
+//                               @"_id":@"5d1d9ec87579ff2ecb89b505",
+//                               @"obfs_param" : @"",
+//                               @"created":@"0",
+//                               @"region":@"hsg",
+//                               @"passwd":@"37a300de",
+//                               @"free":@"NO",
+//                               @"country" : @"jp",
+//                               @"config_id" : @"5d1d9e579deb70279fa00b6e"};
+//
+//    [[NSUserDefaults standardUserDefaults] setObject:proxyDic forKey:@"AryaLineConfiguration"];
+    
+//    ///其他節點 香港
+//    NSDictionary *proxyDic = @{@"port":@"15165",
+//                               @"protocol_param":@"",
+//                               @"method":@"aes-256-cfb",
+//                               @"obfs":@"http_simple",
+//                               @"protocol":@"auth_aes128_md5",
+//                               @"hostname":@"hk.le11.pandassr.xyz",
+//                               @"obfs_param" : @"download.windowsupdate.com",
+//                               @"passwd":@"52MG4X"};
+//
+//    [[NSUserDefaults standardUserDefaults] setObject:proxyDic forKey:@"AryaLineConfiguration"];
+    
+    ///其他節點 美國 測試10/08
+//    NSDictionary *proxyDic = @{@"port":@"32786",
+//                               @"protocol_param":@"",
+//                               @"method":@"aes-256-cfb",
+//                               @"obfs":@"plain",
+//                               @"protocol":@"origin",
+//                               @"hostname":@"106.75.166.190",
+//                               @"obfs_param" : @"",
+//                               @"passwd":@"1a93f591"};
+//
+//    [[NSUserDefaults standardUserDefaults] setObject:proxyDic forKey:@"AryaLineConfiguration"];
+    
+    //Nginx結點 10/17
+    NSDictionary *proxyDic = @{@"port":@"32799",
+                               @"protocol_param":@"",
+                               @"method":@"aes-256-cfb",
+                               @"obfs":@"plain",
+                               @"protocol":@"origin",
+                               @"hostname":@"106.75.166.190",
+                               @"obfs_param" : @"",
+                               @"passwd":@"5a652e20"};
+    
+    [[NSUserDefaults standardUserDefaults] setObject:proxyDic forKey:@"AryaLineConfiguration"];
+    
+//    [0]    (null)    @"port" : (long)32799
+//    [1]    (null)    @"enable" : YES
+//    [2]    (null)    @"protocol_param" : @""
+//    [3]    (null)    @"method" : @"aes-256-cfb"
+//    [4]    (null)    @"obfs" : @"plain"
+//    [5]    (null)    @"protocol" : @"origin"
+//    [6]    (null)    @"user" : @"5da8246c5d161763f7351016"
+//    [7]    (null)    @"username" : @"wuyilong80@gmail.com"
+//    [8]    (null)    @"hostname" : @"laxaws1.haixapp.com"
+//    [9]    (null)    @"_id" : @"5da7b42896d6e46426a0871d"
+//    [10]    (null)    @"obfs_param" : @""
+//    [11]    (null)    @"created" : (long)0
+//    [12]    (null)    @"region" : @"lax"
+//    [13]    (null)    @"passwd" : @"5a652e20"
+//    [14]    (null)    @"free" : NO
+//    [15]    (null)    @"country" : @"us"
+//    [16]    (null)    @"config_id" : @"5da7b3e700f3f2198808113c"
+    
+//    [NetworkApi Getusernodes:nil anddic:nil block:^(NSDictionary *responseObject) {
+//        NSArray *ary = responseObject[@"data"][@"nodes"];
+//        for (int i = 0; i < ary.count; i++) {
+//            NSString *country = ary[i][@"country"];
+//            if ([country isEqualToString:@"us"]) {
+//                [[NSUserDefaults standardUserDefaults] setObject:ary[i] forKey:@"AryaLineConfiguration"];
+//            }
+//        }
+//    } block:^(NSError *error) {
+//        NSLog(@"%@", error);
+//    }];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{

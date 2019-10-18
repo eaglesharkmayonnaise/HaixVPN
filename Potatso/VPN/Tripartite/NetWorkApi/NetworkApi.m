@@ -32,7 +32,7 @@
         [self Getusernodes:nil anddic:nil block:^(NSDictionary *responseObject) {
             
         //存入节点数据
-        [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"data"][@"nodes"][0] forKey:@"AryaLineConfiguration"];
+//        [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"data"][@"nodes"][0] forKey:@"AryaLineConfiguration"];
             
         } block:^(NSError *error) {}];
         
