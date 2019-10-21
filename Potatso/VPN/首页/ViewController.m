@@ -266,7 +266,7 @@
     RightBtn.frame = CGRectMake(kscreenw - 50 - 5, 25 , 50, 50);
     [RightBtn setImage:[UIImage imageNamed:@"BuyPackage"] forState:UIControlStateNormal];
     [RightBtn addTarget:self action:@selector(BuyPackage) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:RightBtn];
+    [self.view addSubview:RightBtn];
     
     //水波
     imagegif = [[GifView alloc]initWithFrame:CGRectMake(-20,kscreenh-170, kscreenw + 40 , 170) filePath:[[NSBundle mainBundle] pathForResource:@"水波动画.gif"ofType:nil]];
@@ -696,8 +696,12 @@
 
 //BuyPackage 购买套餐
 -(void)BuyPackage{
-    SystemPurchaseViewController *Buy = [SystemPurchaseViewController new];
-    [self.navigationController pushViewController:Buy animated:YES];
+//    SystemPurchaseViewController *Buy = [SystemPurchaseViewController new];
+//    [self.navigationController pushViewController:Buy animated:YES];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"https://www.haixiatech.com/"]]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.haixiatech.com/"]];
+    }
 }
 
 

@@ -15,6 +15,7 @@
 #import "AboutViewController.h"
 #import "SignViewController.h"
 #import "MyOrdersViewController.h"
+#import "ServiceViewController.h"
 @implementation DEMOMenuViewController{
     UILabel *UserExpired;
     UILabel *textUsername ;
@@ -337,6 +338,16 @@
             //设置打开抽屉模式为MMOpenDrawerGestureModeNone，也就是没有任何效果。
             [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
         }];
+    }else if (indexPath.row == 3) {
+        
+        ServiceViewController *service = [ServiceViewController new];
+        
+        UINavigationController* nav = (UINavigationController*)self.mm_drawerController.centerViewController;
+        [nav pushViewController:service animated:NO];
+        
+        [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
+            [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
+        }];
     }
 //    else
 //    {
@@ -372,7 +383,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex{
     
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -385,7 +396,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
 
-    NSArray *titles = @[@"我的方案", @"裝置", @"幫助"];
+    NSArray *titles = @[@"我的方案", @"裝置", @"幫助", @"客服"];
 //    cell.imageView.image = [UIImage imageNamed:titles[indexPath.row]];
     UIImage*icon = [UIImage imageNamed:titles[indexPath.row]];
     CGSize itemSize = CGSizeMake(24, 24);

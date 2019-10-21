@@ -138,6 +138,7 @@
 		B8EAC5941D40BF310046963C /* TunnelError.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EAC5931D40BF310046963C /* TunnelError.m */; };
 		B8F784671D3678B400F02FF5 /* Settings.h in Headers */ = {isa = PBXBuildFile; fileRef = B8F784651D3678B400F02FF5 /* Settings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8F784681D3678B400F02FF5 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F784661D3678B400F02FF5 /* Settings.m */; };
+		CB7A4C1A235AEB2D00BC2F29 /* ServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7A4C19235AEB2D00BC2F29 /* ServiceViewController.m */; };
 		F50176501F7F5D7200441B8F /* WYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F501764F1F7F5D7200441B8F /* WYTableViewCell.m */; };
 		F51252031F7C91D10006205F /* 水波动画.gif in Resources */ = {isa = PBXBuildFile; fileRef = F51252021F7C91D10006205F /* 水波动画.gif */; };
 		F51252091F7C99190006205F /* MyPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51252081F7C99190006205F /* MyPlanViewController.m */; };
@@ -871,6 +872,8 @@
 		B8EAC5931D40BF310046963C /* TunnelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TunnelError.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		B8F784651D3678B400F02FF5 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		B8F784661D3678B400F02FF5 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		CB7A4C18235AEB2D00BC2F29 /* ServiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceViewController.h; sourceTree = "<group>"; };
+		CB7A4C19235AEB2D00BC2F29 /* ServiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceViewController.m; sourceTree = "<group>"; };
 		DFAF05C4CA29869A03E25A65 /* Pods_PotatsoLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PotatsoLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F501764E1F7F5D7200441B8F /* WYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTableViewCell.h; sourceTree = "<group>"; };
 		F501764F1F7F5D7200441B8F /* WYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTableViewCell.m; sourceTree = "<group>"; };
@@ -2319,6 +2322,8 @@
 				F51252061F7C99050006205F /* MyPlan */,
 				F573B7B61F0F502D006ECCA2 /* 购买 */,
 				F573B7BE1F0F502D006ECCA2 /* 首页 */,
+				CB7A4C18235AEB2D00BC2F29 /* ServiceViewController.h */,
+				CB7A4C19235AEB2D00BC2F29 /* ServiceViewController.m */,
 			);
 			path = VPN;
 			sourceTree = "<group>";
@@ -3658,6 +3663,7 @@
 				F573B82D1F0F51C5006ECCA2 /* README.md in Sources */,
 				F5CDAD1A1F94C4E70050B9FA /* MyOrdersPendingViewController.m in Sources */,
 				F52F8BC21F611E920073E106 /* XLCircle.m in Sources */,
+				CB7A4C1A235AEB2D00BC2F29 /* ServiceViewController.m in Sources */,
 				F573B8271F0F51C5006ECCA2 /* AFNetworkReachabilityManager.m in Sources */,
 				F5B6901B20D21D00009F2F47 /* UIView+UIView_Fram.m in Sources */,
 				F52722401F99E436006020B3 /* AboutViewController.m in Sources */,
