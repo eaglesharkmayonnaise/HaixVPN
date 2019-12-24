@@ -3094,7 +3094,7 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 846A6Y9PA3;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -3129,7 +3129,7 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 846A6Y9PA3;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -3323,21 +3323,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Potatso/Pods-Potatso-resources.sh",
-				"${PODS_ROOT}/../Plugins/PWAlipayPlugin/PWAlipayPluginResource.bundle",
-				"${PODS_ROOT}/../Plugins/PWAlipayPlugin/AlipaySDK.bundle",
 				"${PODS_ROOT}/../Core SDK/PWCoreSDKResource.bundle",
 				"${PODS_ROOT}/../Plugins/PWGameUIPlugin/PWGameUIPluginResource.bundle",
 				"${PODS_ROOT}/../Plugins/PWMycardPlugin/PWMyCardPluginResource.bundle",
-				"${PODS_ROOT}/../Plugins/PWWechatpayPlugin/PWWechatpayPluginResource.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PWAlipayPluginResource.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AlipaySDK.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PWCoreSDKResource.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PWGameUIPluginResource.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PWMyCardPluginResource.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PWWechatpayPluginResource.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3977,8 +3971,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Potatso/Potatso.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 846A6Y9PA3;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -4028,10 +4022,10 @@
 					"\"${PODS_ROOT}/../Plugins/PWWechatpayPlugin/Wechatpay\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.chinese.net;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.net;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = haixvpn;
 				SWIFT_OBJC_BRIDGING_HEADER = "Potatso/Potatso-Bridge-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -4047,8 +4041,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Potatso/Potatso.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 846A6Y9PA3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4092,10 +4086,10 @@
 					"\"${PODS_ROOT}/../Plugins/PWWechatpayPlugin\"",
 					"\"${PODS_ROOT}/../Plugins/PWWechatpayPlugin/Wechatpay\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.chinese.net;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.net;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = haixvpn;
 				SWIFT_OBJC_BRIDGING_HEADER = "Potatso/Potatso-Bridge-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -4110,8 +4104,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 846A6Y9PA3;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -4141,10 +4135,10 @@
 					"$(PROJECT_DIR)/PacketTunnel/Shadowsocks/libsodium-ios/lib",
 					"$(PROJECT_DIR)/PacketTunnel",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.chinese.net.tunl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.net.tunl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "haixvpn tunl";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -4157,8 +4151,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 846A6Y9PA3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4186,10 +4180,10 @@
 					"$(PROJECT_DIR)/PacketTunnel/Shadowsocks/libsodium-ios/lib",
 					"$(PROJECT_DIR)/PacketTunnel",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.chinese.net.tunl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.net.tunl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "haixvpn tunl";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -4219,7 +4213,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "";
-				PRODUCT_BUNDLE_IDENTIFIER = io.wasin.potatso.PotatsoLibrary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.1.PotatsoLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -4253,7 +4247,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "";
-				PRODUCT_BUNDLE_IDENTIFIER = io.wasin.potatso.PotatsoLibrary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.1.PotatsoLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -4281,7 +4275,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.wasin.potatso.PotatsoBase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.1.PotatsoBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -4309,7 +4303,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.wasin.potatso.PotatsoBase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.1.PotatsoBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -4342,7 +4336,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.wasin.potatso.PotatsoModel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.1.PotatsoModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -4375,7 +4369,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.wasin.potatso.PotatsoModel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.1.PotatsoModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -4416,7 +4410,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.wasin.potatoso.PacketProcessor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.1.PacketProcessor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -4456,7 +4450,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.wasin.potatoso.PacketProcessor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haixvpn.1.PacketProcessor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;

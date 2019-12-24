@@ -6,8 +6,8 @@
 //  Copyright © 2015 TouchingApp. All rights reserved.
 //
 #import "PWCoreSDK.h"
-#import "PWAlipayPlugin.h"
-#import "PWWechatpayPlugin.h"
+//#import "PWAlipayPlugin.h"
+//#import "PWWechatpayPlugin.h"
 #import "PWCardScannerPlugin.h"
 #import "PWMyCardPlugin.h"
 #import "PWGameUIPlugin.h"

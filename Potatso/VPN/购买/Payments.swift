@@ -9,6 +9,8 @@
 import Foundation
 
 class Payments: NSObject {
+    
+    /*
     // 定义一个可变字典
     var PlaneTypedic : [String : NSObject] = [String : NSObject]()
     let payment = PWPaymentObject()
@@ -160,5 +162,6 @@ extension Payments {
         }
         return digestData.map { String(format: "%02hhx", $0) }.joined()
     }
+*/
 }
 

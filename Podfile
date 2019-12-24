@@ -63,8 +63,8 @@ target "Potatso" do
 #支付
     pod 'CardIO'
     pod 'PWCoreSDK', :path => '.'
-    pod 'PWAlipayPlugin', :path => '.'
-    pod 'PWWechatpayPlugin', :path => '.'
+#     pod 'PWAlipayPlugin', :path => '.'
+#     pod 'PWWechatpayPlugin', :path => '.'
     pod 'PWCardScannerPlugin', :path => '.'
     pod 'PWMyCardPlugin', :path => '.'
     pod 'PWGameUIPlugin', :path => '.'

@@ -33,6 +33,7 @@
 #import "ForgetSetPwdViewController.h"
 #import "SystemPurchaseViewController.h"
 #import "UIView+Frame.h"
+#import "ServiceViewController.h"
 #define Kscreenw [UIScreen mainScreen].bounds.size.width
 #define Kscreenh [UIScreen mainScreen].bounds.size.height
 #define GGBS [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]
@@ -95,9 +96,14 @@
     [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
     
     if ([[NSUserDefaults standardUserDefaults] valueForKey:@"aryaToken"] == nil) {
-        RigistViewController *sign = [RigistViewController new];
-        [self presentViewController:sign animated:YES completion:nil];
-        return;
+        
+        BOOL isSkip = [[NSUserDefaults standardUserDefaults] boolForKey:@"isSkip"];
+        
+        if (!isSkip) {
+            RigistViewController *sign = [RigistViewController new];
+            [self presentViewController:sign animated:YES completion:nil];
+            return;
+        }
     }
     
     //发送设备信息给乐伦
@@ -341,8 +347,9 @@
     
     //unblockmy icon
 //    imageArrowbtn = [[UIImageView alloc] initWithFrame:CGRectMake( RoundInsidebutun.frame.origin.x + (140 *SJwidth - 87)/2, RoundInsidebutun.frame.origin.y + (140 *SJwidth - 54)/2, RoundInsidebutun.bounds.size.width, RoundInsidebutun.bounds.size.height)];
-    imageArrowbtn = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, RoundInsidebutun.bounds.size.width/3*2, RoundInsidebutun.bounds.size.height/3*2)];
+    imageArrowbtn = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, RoundInsidebutun.bounds.size.width, RoundInsidebutun.bounds.size.height)];
     imageArrowbtn.center = RoundInsidebutun.center;
+    imageArrowbtn.contentMode = UIViewContentModeScaleAspectFill;
     imageArrowbtn.image = [UIImage imageNamed:@"DisConnectImage"];
     [imageArrowbtn setUserInteractionEnabled:YES];
     [[self view] addSubview:imageArrowbtn];
@@ -644,7 +651,7 @@
     }];
     
     // 保存可连接
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.haixvpn.chinese.net"];
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.haixvpn.net"];
     [shared setObject:@"可连" forKey:@"设置可连or不可连"];
     [shared synchronize];
     [SAMKeychain setPassword:@"可连" forService:@"设置不可连" account:@"设置不可连"];
@@ -698,10 +705,21 @@
 -(void)BuyPackage{
 //    SystemPurchaseViewController *Buy = [SystemPurchaseViewController new];
 //    [self.navigationController pushViewController:Buy animated:YES];
+
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提醒" message:@"聯絡客服" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        ServiceViewController *service = [ServiceViewController new];
+        UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:service];
+        [self presentViewController:navi animated:YES completion:nil];
+    }];
     
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"https://www.haixiatech.com/"]]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.haixiatech.com/"]];
-    }
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    
+//    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"https://www.haixiatech.com/"]]) {
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.haixiatech.com/"]];
+//    }
 }
 
 

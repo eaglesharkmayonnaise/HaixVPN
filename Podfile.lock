@@ -67,11 +67,6 @@ PODS:
     - PSOperations/Core
   - PSOperations/Passbook (5.0.1):
     - PSOperations/Core
-  - PWAlipayPlugin (3.0.0):
-    - PWAlipayPlugin/Alipay (= 3.0.0)
-    - PWCoreSDK (>= 3.0.0)
-  - PWAlipayPlugin/Alipay (3.0.0):
-    - PWCoreSDK (>= 3.0.0)
   - PWCardScannerPlugin (3.0.0):
     - CardIO
     - PWCoreSDK (>= 3.0.0)
@@ -81,11 +76,6 @@ PODS:
   - PWGameUIPlugin (3.0.0):
     - PWCoreSDK (>= 3.0.0)
   - PWMyCardPlugin (3.0.0):
-    - PWCoreSDK (>= 3.0.0)
-  - PWWechatpayPlugin (3.0.0):
-    - PWCoreSDK (>= 3.0.0)
-    - PWWechatpayPlugin/Wechatpay (= 3.0.0)
-  - PWWechatpayPlugin/Wechatpay (3.0.0):
     - PWCoreSDK (>= 3.0.0)
   - Realm (2.10.2):
     - Realm/Headers (= 2.10.2)
@@ -128,12 +118,10 @@ DEPENDENCIES:
   - MMDrawerController (~> 0.5.7)
   - MMWormhole (~> 2.0.0)
   - PSOperations
-  - PWAlipayPlugin (from `.`)
   - PWCardScannerPlugin (from `.`)
   - PWCoreSDK (from `.`)
   - PWGameUIPlugin (from `.`)
   - PWMyCardPlugin (from `.`)
-  - PWWechatpayPlugin (from `.`)
   - RealmSwift (~> 2.10.2)
   - SDWebImage
   - SVGKit (from `https://github.com/SVGKit/SVGKit.git`, branch `2.x`)
@@ -180,8 +168,6 @@ EXTERNAL SOURCES:
     :path: "./Library/Aspects/"
   ICSMainFramework:
     :path: "./Library/ICSMainFramework/"
-  PWAlipayPlugin:
-    :path: "."
   PWCardScannerPlugin:
     :path: "."
   PWCoreSDK:
@@ -189,8 +175,6 @@ EXTERNAL SOURCES:
   PWGameUIPlugin:
     :path: "."
   PWMyCardPlugin:
-    :path: "."
-  PWWechatpayPlugin:
     :path: "."
   SVGKit:
     :branch: 2.x
@@ -230,12 +214,10 @@ SPEC CHECKSUMS:
   MMWormhole: 0cd3fd35a9118b2e2d762b499f54eeaace0be791
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   PSOperations: 41cb5799799d1af160cc8b5c802bfb0f28e251e6
-  PWAlipayPlugin: 6ce1847a70162382de6afcd7874b419f47093ee4
   PWCardScannerPlugin: c69e8333e0b986dc8ec73ca9352024935b05f114
   PWCoreSDK: 04dcd33c27b55e00d7e9c2d2e4b2872c65e5fc87
   PWGameUIPlugin: 638643f55f8fc013de1ad1bee91bf2405fcc862f
   PWMyCardPlugin: 9f7d4f02525eeadb55160d78cd029ba9ccc0cec6
-  PWWechatpayPlugin: 11933a7cdb420d358522c34871d8e49b235596f5
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
   RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
@@ -245,6 +227,6 @@ SPEC CHECKSUMS:
   YAML-Framework: e63ac91e0494f10022bd311fa3f12d963f6233e7
   YBAttributeTextTapAction: b7e61f0265b5673e7ce7bad7319e8eff9e209a2b
 
-PODFILE CHECKSUM: 95eccca0d83b8e948149dec7acc931bc52789545
+PODFILE CHECKSUM: a576f091471fc1e79520a9fa7c22de5115f390f6
 
 COCOAPODS: 1.5.2

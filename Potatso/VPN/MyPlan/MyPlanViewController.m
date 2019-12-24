@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "PurchaseViewController.h"
 #import "SystemPurchaseViewController.h"
+#import "ServiceViewController.h"
 @interface MyPlanViewController ()<UINavigationControllerDelegate>
 
 @end
@@ -191,8 +192,17 @@
 
 -(void)upgrade
 {
-    SystemPurchaseViewController *system = [SystemPurchaseViewController new];
-    [self.navigationController pushViewController:system animated:YES];
+//    SystemPurchaseViewController *system = [SystemPurchaseViewController new];
+//    [self.navigationController pushViewController:system animated:YES];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提醒" message:@"聯絡客服" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        ServiceViewController *service = [ServiceViewController new];
+        UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:service];
+        [self presentViewController:navi animated:YES completion:nil];
+    }];
+    
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

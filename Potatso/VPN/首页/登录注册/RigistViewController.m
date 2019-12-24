@@ -99,6 +99,12 @@
     [NextBtn addTarget:self action:@selector(SendSMS) forControlEvents:UIControlEventTouchUpInside];
     [[self view] addSubview:NextBtn];
     
+    UIButton *skipButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 324 *SJwidth, 100, 50)];
+    skipButton.center = CGPointMake(NextBtn.center.x, NextBtn.center.y+60);
+    [skipButton setTitle:@"SKIP" forState:UIControlStateNormal];
+    [skipButton addTarget:self action:@selector(skipButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:skipButton];
+    
     labedianji  = [[UILabel alloc]initWithFrame:CGRectMake(0,kscreenh -50, kscreenw, 20)];
     labedianji.textColor = [UIColor whiteColor];
     labedianji.userInteractionEnabled =YES;
@@ -133,7 +139,11 @@
 }
 
 
-
+- (void)skipButtonClicked {
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isSkip"];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 //发送验证码
 -(void)SendSMS{
